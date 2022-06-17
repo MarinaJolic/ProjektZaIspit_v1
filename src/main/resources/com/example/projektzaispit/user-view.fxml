@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="583.0" prefWidth="796.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projektzaispit.controller.UserController">
+   <children>
+      <Button layoutX="20.0" layoutY="14.0" mnemonicParsing="false" onAction="#natrag" prefHeight="35.0" prefWidth="83.0" style="-fx-background-radius: 40; -fx-background-color: #a3cee3;" text="Natrag" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="18.0">
+         <font>
+            <Font name="Eras Demi ITC" size="14.0" />
+         </font></Button>
+      <GridPane layoutX="528.0" layoutY="69.0" prefHeight="306.0" prefWidth="260.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="303.0" minWidth="10.0" prefWidth="104.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="202.0" minWidth="10.0" prefWidth="151.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="17.0" prefWidth="100.0" style=": ;" text="Ime ">
+               <font>
+                  <Font name="Eras Demi ITC" size="14.0" />
+               </font></Label>
+            <Label layoutX="10.0" layoutY="27.0" prefHeight="17.0" prefWidth="122.0" text="E-mail" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Eras Demi ITC" size="14.0" />
+               </font></Label>
+            <Label layoutX="10.0" layoutY="77.0" text="Broj telefona" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Eras Demi ITC" size="14.0" />
+               </font></Label>
+            <Label layoutX="10.0" layoutY="77.0" prefHeight="17.0" prefWidth="66.0" text="Prezime" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Eras Demi ITC" size="14.0" />
+               </font></Label>
+            <Label text="Posao" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Eras Demi ITC" size="14.0" />
+               </font></Label>
+            <Label prefHeight="17.0" prefWidth="72.0" text="Odjel" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Eras Demi ITC" size="14.0" />
+               </font></Label>
+            <TextField fx:id="firstNameTxt" style="-fx-background-radius: 30;" GridPane.columnIndex="1" />
+            <TextField fx:id="lastNameTxt" prefHeight="25.0" prefWidth="154.0" style="-fx-background-radius: 30;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="phoneNumberTxt" layoutX="161.0" layoutY="73.0" style="-fx-background-radius: 30;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="emailTxt" layoutX="161.0" layoutY="73.0" style="-fx-background-radius: 30;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ComboBox fx:id="jobsCbx" prefHeight="25.0" prefWidth="176.0" style="-fx-background-radius: 30;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <ComboBox fx:id="depCbx" prefHeight="25.0" prefWidth="186.0" style="-fx-background-radius: 30;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+      <Button layoutX="684.0" layoutY="387.0" mnemonicParsing="false" onAction="#saveEmployees" prefHeight="35.0" prefWidth="104.0" style="-fx-background-radius: 40; -fx-background-color: #a3cee3;" text="Spremi">
+         <font>
+            <Font name="Eras Demi ITC" size="15.0" />
+         </font></Button>
+      <TableView fx:id="tableViewEmployee" layoutX="3.0" layoutY="69.0" onMouseClicked="#SelectedEmployees" prefHeight="286.0" prefWidth="473.0" style="-fx-background-color: #c8dde8;" AnchorPane.bottomAnchor="217.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="60.0">
+        <columns>
+          <TableColumn fx:id="TableColumnFirstName" prefWidth="75.0" text="Ime" />
+          <TableColumn fx:id="TableColumnLastName" prefWidth="87.0" text="Prezime" />
+            <TableColumn fx:id="TableColumnEmail" prefWidth="85.0" text="E-mail" />
+            <TableColumn fx:id="TableColumnPhoneNumber" prefWidth="83.0" text="Broj telefona" />
+            <TableColumn fx:id="TableColumnJobsCbx" prefWidth="72.0" text="Posao" />
+            <TableColumn fx:id="TableColumnDepCbx" prefWidth="70.0" text="Odjel" />
+        </columns>
+      </TableView>
+      <Button fx:id="DeleteBtn" layoutX="117.0" layoutY="14.0" mnemonicParsing="false" onAction="#deleteEmpoyees" prefHeight="35.0" prefWidth="83.0" style="-fx-background-radius: 40; -fx-background-color: #a3cee3;" text="Obriši" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="18.0">
+         <font>
+            <Font name="Eras Demi ITC" size="14.0" />
+         </font></Button>
+   </children>
+   <padding>
+      <Insets left="20.0" right="20.0" top="20.0" />
+   </padding>
+</AnchorPane>
